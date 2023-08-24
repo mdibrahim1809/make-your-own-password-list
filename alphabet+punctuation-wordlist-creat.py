@@ -1,6 +1,6 @@
 from string import *
 from itertools import product
-
+import sys , subprocess
 value = ascii_letters + punctuation
 
 x = input("enter the shortest length of your password :")
@@ -14,3 +14,5 @@ for i in range(x,y+1):
         p = open("password.txt","a")
         p.write(word)
         p.write("\n")
+        subprocess.run("clear" , shell = True)
+        print("your wordlist creation is processing...")
